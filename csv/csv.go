@@ -26,7 +26,7 @@ func Save(playbackType string, records [][]string) error {
 
 	csvWriter := csv.NewWriter(csvFile)
 
-	if err = csvWriter.Write([]string{"normalized_user_agent", "_count"}); err != nil {
+	if err = csvWriter.Write([]string{"normalized_user_agent", "count"}); err != nil {
 		return err
 	}
 
