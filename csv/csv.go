@@ -7,16 +7,16 @@ import (
 )
 
 const (
-	outputPath = "out"
-	csvPath    = outputPath + "/%s.csv"
+	outPath = "out"
+	csvPath = outPath + "/%s"
 )
 
-func Save(playbackType string, records [][]string) error {
-	if err := os.MkdirAll(outputPath, os.ModePerm); err != nil {
+func Save(fileName string, records [][]string) error {
+	if err := os.MkdirAll(outPath, os.ModePerm); err != nil {
 		return err
 	}
 
-	filePath := fmt.Sprintf(csvPath, playbackType)
+	filePath := fmt.Sprintf(csvPath, fileName)
 	csvFile, err := os.Create(filePath)
 	if err != nil {
 		return err

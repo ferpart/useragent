@@ -15,3 +15,14 @@ The program will output a generalized user agent csv like the following:
 |-----------------------|-------|
 | Android/10.0          | 1000  |
 | Windows/10.0          | 500   |
+
+## Requirements
+This application was tested on `go1.20` but should work on any go version with modules support.
+
+The application will read and normalize all csv files within a `in` folder in the project root. All normalized csv files will
+be saved in an `out` folder in the project's root with the same name as in the input folder.
+
+## How to run
+```bash
+go run main.go
+```
